@@ -16,7 +16,7 @@ const DetailsHeader = ({ artistId, artistData, songData, songId }) => {
           <div className="ml-5">
             <p className="font-bold sm:text-3xl text-xl text-white">{artistId ? artistData.data.artist.profile.name : currentSong.name}</p>
               {!artistId && currentSong.artists.map((artist) => (
-                <Link to={`/artists/${artist.id}`}>
+                <Link to={`/music_app/artists/${artist.id}`}>
                   <p className="text-base text-gray-400 mt-2">{artist.name}</p>
                 </Link>
               ))}

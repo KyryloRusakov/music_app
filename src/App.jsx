@@ -17,12 +17,12 @@ const App = () => {
           <div className="flex-1 h-fit pb-40">
             <Routes>
               <Route path="/music_app" element={<Discover />} />
-              <Route path="/top-artists" element={<TopArtists />} />
-              <Route path="/top-charts" element={<TopCharts />} />
-              <Route path="/around-you" element={<AroundYou />} />
-              <Route path="/artists/:id" element={<ArtistDetails />} />
-              <Route path="/songs/:songid" element={<SongDetails />} />
-              <Route path="/search/:searchTerm" element={<Search />} />
+              <Route path="/music_app/top-artists" element={<TopArtists />} />
+              <Route path="/music_app/top-charts" element={<TopCharts />} />
+              <Route path="/music_app/around-you" element={<AroundYou />} />
+              <Route path="/music_app/artists/:id" element={<ArtistDetails />} />
+              <Route path="/music_app/songs/:songid" element={<SongDetails />} />
+              <Route path="/music_app/search/:searchTerm" element={<Search />} />
             </Routes>
           </div>
           <div className="xl:sticky relative top-0 h-fit">

@@ -17,12 +17,12 @@ const TopChartCard = ({ song, i, isPlaying, activeSong, handlePauseClick, handle
     <div className="flex-1 flex flex-row justify-between items-center">
       <img alt={song.name} src={song.album.images[0].url} className="w-20 h-20 rounded-lg"/>
       <div className="flex-1 flex flex-col justify-center mx-3">
-        <Link to={`/songs/${song.id}`}>
+        <Link to={`/music_app/songs/${song.id}`}>
           <p className="text-xl font-bold text-white">{song?.name}</p>
         </Link>
         <div className="flex gap-3">
           {song.artists.map((artistsName) => (
-            <Link to={`/artists/${artistsName.id}`} className="text-base text-gray-300 mt-1">{artistsName.name}</Link>
+            <Link to={`/music_app/artists/${artistsName.id}`} className="text-base text-gray-300 mt-1">{artistsName.name}</Link>
           ))}
         </div>
       </div>
@@ -65,7 +65,7 @@ const TopPlay = () => {
       <div className="w-full flex flex-col">
         <div className="flex flow-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Charts</h2>
-          <Link to="/top-charts">
+          <Link to="/music_app/top-charts">
             <p className="text-gray-300 text-base cursor-pointer">See more</p>
           </Link>
         </div>
@@ -88,7 +88,7 @@ const TopPlay = () => {
       <div className="w-full flex flex-col mt-8">
         <div className="flex flow-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Artists</h2>
-          <Link to="/top-artists">
+          <Link to="/music_app/top-artists">
             <p className="text-gray-300 text-base cursor-pointer">See more</p>
           </Link>
         </div>
@@ -108,7 +108,7 @@ const TopPlay = () => {
               style={{width: '25%', height: 'auto'}}
               className="shadow-lg rounded-full animate-slideright"
             >
-              <Link to={`/artist/${artist?.id}`}>
+              <Link to={`/music_app/artist/${artist?.id}`}>
                 <img alt="name" src={artist.images[0].url} className="rounded-full w-full object-cover"/>
               </Link>
             </SwiperSlide>
