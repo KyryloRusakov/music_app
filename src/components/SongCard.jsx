@@ -32,13 +32,13 @@ const SongCard = ({ song, isPlaying, activeSong, i, data }) => {
 
       <div className="mt-4 flex flex-col">
         <p className="font-semibold text-lg text-white truncate">
-          <Link to={`/music_app/songs/${song?.key}`}>
+          <Link to={`/music_app/songs/${song?.id}`}>
             {song.name}
           </Link>
         </p>
-        <p className="text-sm truncate text-gray-300 mt-1">
+        <p className="text-sm truncate text-gray-300 mt-1 flex gap-3">
           {song.artists.map((artistsName) => (
-            <Link to={artistsName.name}>{artistsName.name}</Link>
+            <Link to={`/music_app/artists/${artistsName.id}`}>{artistsName.name}</Link>
           ))}
         </p>
       </div>
