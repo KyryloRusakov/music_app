@@ -1,24 +1,21 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { DetailsHeader, Error, Loader } from "../components";
+import { useParams } from 'react-router-dom';
+import { DetailsHeader, Error, Loader } from '../components';
 
-import { useGetSongDetailsQuery, useGetTopChartsQuery } from "../redux/services/shazamCore";
+import { useGetSongDetailsQuery, useGetTopChartsQuery } from '../redux/services/shazamCore';
 
 const SongDetails = () => {
-  const dispatch = useDispatch();
   const { songid } = useParams();
+
   const { data: songData, isFetching: isFetchingSongDetails, error } = useGetSongDetailsQuery({ songid });
   const { data: charts } = useGetTopChartsQuery();
-  console.log(songData);
-  console.log(charts);
 
-  if (isFetchingSongDetails) return <Loader title="Searching song details"/>;
+  if (isFetchingSongDetails) return <Loader title="Searching song details" />;
 
   if (error) return <Error />;
 
   return (
     <div className="flex flex-col">
-      <DetailsHeader artistId="" songData={charts} songId={songid}/>
+      <DetailsHeader artistId="" songData={charts} songId={songid} />
 
       <div className="mb-10">
         <h2 className="text-white text-3xl font-bold">Lyrics:</h2>

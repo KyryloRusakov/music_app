@@ -1,4 +1,4 @@
-import SongBar from "./SongBar";
+import SongBar from './SongBar';
 
 const RelatedSongs = ({ data, isPlaing, activeSong, artistId }) => (
   <div className="flex flex-col">
@@ -6,9 +6,9 @@ const RelatedSongs = ({ data, isPlaing, activeSong, artistId }) => (
       Related Songs:
     </h1>
 
-    {/* <div className="mt-6 w-full flex flex-col">
+    <div className="mt-6 w-full flex flex-col">
       {data?.map((song, i) => (
-        <SongBar 
+        <SongBar
           key={song.key}
           song={song}
           i={i}
@@ -17,7 +17,7 @@ const RelatedSongs = ({ data, isPlaing, activeSong, artistId }) => (
           activeSong={activeSong}
         />
       ))}
-    </div> */}
+    </div>
   </div>
 );
 
